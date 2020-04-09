@@ -1,0 +1,349 @@
+/*
+ * Evening Startpage
+ * Inspired by https://github.com/jeroenpardon/sui
+ * You can find it at https://github.com/TB-96/Evening-Startpage
+ * Made by TB-96 2020
+ *
+ */
+:root {
+  --color-theme: #2978ad;
+  --bg-primary: #dbdad5;
+  --bg-secondary: rgba(255, 255, 255, 0.5);
+  --bg-hover: rgba(41,120,173,.5);
+  --color-primary: #2d2e31;
+  --color-secondary: #383840;
+  --color-tertiary: #cc0f21;
+  --color-accent: #7a8486;
+  --color-success: #66BB6A;
+  --color-warning: #F57C00;
+  --color-danger: #DC3545;
+  --padding: 1rem;
+  --rounded: 0.25rem;
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.12)
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  transition: opacity .3s;
+  font-family: "Fira Sans";
+}
+
+html {
+  color: var(--color-primary);
+  background: var(--bg-primary);
+}
+body {
+  margin: 0 auto;
+	padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #4e4e4e;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+}
+
+a, a:visited {
+  color: var(--color-secondary);
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	text-decoration: underline;
+  cursor: pointer;
+  webkit-text-decoration-color: var(--color-text-acc);
+  webkit-text-decoration-skip: true;
+}
+
+#container {
+  margin: 1em auto 0;
+  width: 70%;
+}
+
+h1, h2 {
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+h3, h4 {
+    text-transform: uppercase;
+    text-align: left;
+    
+}
+h1 {
+    font-size: 4em;
+    font-weight: 400;
+    font-family: Roboto Slab;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    padding: var(--padding);
+    color: var(--color-secondary);
+}
+h4 {
+	font-size: 1.1em;
+	font-weight: 400;
+  padding-bottom: .5rem;
+  color: var(--color-tertiary);
+}
+#togglebookmarks {
+  text-decoration: none!important;
+}
+
+button {
+  background-color: var(--bg-hover);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  box-shadow: var(--shadow);
+}
+button:hover {
+  background-color: var(--color-theme);
+}
+
+/* ANIMATION */
+
+@keyframes fadeseq{
+	100%	{
+		opacity: 1;
+	}
+}
+
+.fade {
+	opacity: 0;
+}
+
+.fade {
+	animation: fadeseq .3s forwards;
+}
+
+.fade:nth-child(2) {
+	animation-delay: .4s;
+}
+
+/* HEADERS */
+
+#header {
+  text-align: end;
+  padding-right: 1rem;
+  margin-top: 5rem;
+  margin-bottom: -3.7rem;
+}
+#header-time, #header-date {
+  cursor: default;
+}
+#header-time {
+  font-size: 5em;
+}
+#header-date {
+  margin-top: -1rem;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+}
+#header-quote {
+  margin-top: 1rem;
+}
+
+
+/* LINKS */
+
+#links {
+  margin-top: 2rem;
+}
+
+#apps-container {
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#apps-container a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.apps-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 64px;
+  margin: .5rem;
+  background: var(--bg-secondary);
+  border-radius: var(--rounded);
+  -o-transition: background-color .3s;
+  -ms-transition: background-color .3s;
+  -moz-transition: background-color .3s;
+  -webkit-transition: background-color .3s;
+  /* ...and now for the proper property */
+  transition: background-color .3s;
+}
+.apps-item:hover:nth-of-type(1) {
+  border: 2px solid #d32e2a;
+}
+.apps-item:hover:nth-of-type(2) {
+  border: 2px solid #df7444;
+}
+.apps-item:hover:nth-of-type(3) {
+  border: 2px solid #c33734;
+}
+.apps-item:hover:nth-of-type(4) {
+  border: 2px solid #f4811e;
+}
+.apps-item:hover:nth-of-type(5) {
+  border: 2px solid #0364b8;
+}
+.apps-item:hover:nth-of-type(6) {
+  border: 2px solid #7cc684;
+}
+.apps-item:hover:nth-of-type(7) {
+  border: 2px solid #9146ff;
+}
+.apps-item:hover:nth-of-type(8) {
+  border: 2px solid #cc5744;
+}
+.apps-item:hover:nth-of-type(9) {
+  border: 2px solid #ffb300;
+}
+.apps-item:hover:nth-of-type(10) {
+  border: 2px solid #616ec6;
+}
+.apps-item:hover:nth-of-type(11) {
+  border: 2px solid #1faa4d;
+}
+.apps-item:hover:nth-of-type(12) {
+  border: 2px solid #005a9b;
+}
+
+
+.apps-icon {
+  width: 1.7rem;
+  margin: 0 1em;
+  
+}
+
+.icon {
+  font-size: 2em;
+}
+
+
+.apps-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.apps-text span {
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none!important;
+}
+.apps-text span:nth-child(2n) {
+  color: var(--color-accent);
+  font-size: 0.8em;
+  text-transform: lowercase;
+}
+
+/* BOOKMARKS */
+
+#links-container {
+  display: grid;
+  flex-wrap: nowrap;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.links-item {
+  line-height: 1.5rem;
+  margin-left: 1rem;
+  margin-bottom: 2em;
+  webkit-font-smoothing: antialiased;
+}
+
+
+/* UNIQUE COLORS */
+
+
+
+/* -------------------- */
+
+.links-item a {
+  color: var(--color-primary);
+  display: block;
+  line-height: 2;
+  text-decoration: none;
+  padding-left: .5em;
+  -o-transition: padding .3s;
+  -ms-transition: padding .3s;
+  -moz-transition: padding .3s;
+  -webkit-transition: padding .3s;
+  transition: padding .3s;
+}
+.links-item a:hover {
+  padding-left: 1em;
+  color: var(--color-tertiary);
+}
+
+
+
+/* MOBILE */
+
+@media screen and (max-width: 1100px) {
+  #container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 858px) {
+  #apps-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90vw;
+  }
+  #links-container	{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 666px) {
+  #apps-container {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+  }
+  #links-container{
+		display: grid;
+		flex-wrap: nowrap;
+		grid-column-gap: 20px;
+		grid-row-gap: 0px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+}
+
+@media screen and (max-width: 520px) {
+  #header {
+    text-align: center;
+    margin: 0;
+}
+    
+}
