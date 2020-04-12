@@ -12,7 +12,7 @@
   --bg-hover: rgba(41,120,173,.5);
   --color-primary: #2d2e31;
   --color-secondary: #383840;
-  --color-tertiary: #cc0f21;
+  --color-tertiary: #a83d3d;
   --color-accent: #7a8486;
   --color-success: #66BB6A;
   --color-warning: #F57C00;
@@ -276,6 +276,12 @@ button:hover {
   margin-left: 1rem;
   margin-bottom: 2em;
   webkit-font-smoothing: antialiased;
+}
+
+.keyw {
+  margin-left: .4rem;
+  font-size: .7rem;
+  color: #a83d3d;
 }
 
 
